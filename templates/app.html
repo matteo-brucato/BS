@@ -1,0 +1,43 @@
+{% extends "mobi.html" %}
+
+{% block content %}
+    
+   
+    
+    
+    
+    <div class="content-primary">
+    
+    <h3 id="welcome-string">Benvenuto {{ user.first_name|escape }}!</h3>
+	
+	{% if todo.count > 0 %}
+	<ul data-role="listview" data-inset="true">
+		<li data-role="list-divider">Questionari da compilare <span class="ui-li-count">{{ todo.count }}</span></li>
+		{% for q in todo %}
+			<li><a href="/givings/compile/{{ q.gid }}/" data-ajax="false">
+				{% for t in q.quid.questionnaire_lang_set.all %}
+				{% if t.lang == request.session.django_language %}
+					<h3>{{ t.title }}</h3>
+				{% endif %}
+				{% endfor %}
+				
+				<p class="ui-li-aside"><strong>{{ q.did }}</strong></p>
+				<p>{{ q.extra_info }}</p>
+				<p>Compilare entro le ore <strong>{{ q.to_date.time }}</strong> del giorno <strong>{{ q.to_date.date }}</strong></p>
+			</a></li>
+		{% endfor %}
+	</ul>
+	{% else %}
+	Al momento non vi sono questionari da compilare.
+	{% endif %}
+	</div>
+	
+	<div class="content-secondary">
+	<div data-role="collapsible" data-collapsed="true" data-theme="b" data-content-theme="d">
+	Side content
+	</div>
+	
+	</div>
+	
+	<!--a href="#login" data-rel="dialog" data-role="button">Login</a-->
+{% endblock %}

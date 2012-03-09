@@ -1,0 +1,9 @@
+{% extends "mobi.html" %}
+{% load url from future %}
+
+{% block content %}
+    
+    <h3>Grazie per aver usato P.ROSE</h3>
+    Clicca <a href="{% url 'django.contrib.auth.views.login' %}">qui</a> per effettuare nuovamente l'accesso.
+
+{% endblock %}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<questionnaire quid="{{ q.0.quid }}">
+	
+	{% spaceless %}
+	{% for ql in q.0.quid.questionnaire_lang_set.all %}
+		{% if ql.lang == request.session.django_language %}
+		<title xml:lang="{{ ql.lang }}">{{ ql.title }}</title>
+		<info xml:lang="{{ ql.lang }}">{{ ql.info }}</info>
+		{% endif %}
+	{% endfor %}
+	{% endspaceless %}
+	<description>{{ q.0.quid.description }}</description>
+	
+	{% for qi in q.0.quid.question_set.all|dictsort:"qid"  %}
+	<question qid="{{ qi.qid }}" type="{{ qi.type }}" left_val="{{ qi.left_val }}" right_val="{{ qi.right_val }}">
+		<description>{{ qi.description }}</description>
+		{% spaceless %}
+		{% for ql in qi.question_lang_set.all %}
+			{% if ql.lang == request.session.django_language %}
+			<string xml:lang="{{ ql.lang }}">{{ ql.string }}</string>
+			{% endif %}
+		{% endfor %}
+		{% for opt in qi.option_set.all|dictsort:"oid" %}
+			{% if opt.lang == request.session.django_language %}
+			<option xml:lang="{{ opt.lang }}" oid="{{ opt.oid }}">{{ opt.description }}</option>
+			{% endif %}
+		{% endfor %}
+		{% endspaceless %}
+	</question>
+	{% endfor %}
+
+</questionnaire>

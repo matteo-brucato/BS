@@ -1,0 +1,81 @@
+{% extends "mobi.html" %}
+{% load url from future %}
+
+{% block content %}
+
+{% if form.errors %}
+<p>Your username and password didn't match. Please try again.</p>
+{% endif %}
+    
+    <h3>É necessario loggarsi per utilizzare P.ROSE</h3>
+	<form action="{% url 'django.contrib.auth.views.login' %}" method="post" id="login-form" data-ajax="false">
+	{% csrf_token %}
+	<ul data-role="listview" data-inset="true">
+		<li data-role="fieldcontain">
+		<div data-role="fieldcontain">
+			<label for="username" class="ui-hidden-accessible">Username:</label>
+			<input type="text" name="username" id="username" value="" placeholder="Email"/>
+		</div>
+		<div data-role="fieldcontain">
+			<label for="password" class="ui-hidden-accessible">Email:</label>
+			<input type="password" name="password" id="password" value="" placeholder="Password"/>
+		</div>
+		</li>
+		<li data-role="fieldcontain"><button type="submit" data-theme="b">Login</button></li>
+		<div style='display:none'><input type="hidden" name="next" value="{{ next }}" /></div>
+	</ul>
+	</form>
+    
+    <script type="text/javascript">
+    $('form').submit(function(event) {
+        if ($(this).hasClass('noajax') || ! AJAX_ACTIVE) return;
+        
+        // Stop form from submitting normally
+        event.preventDefault(); 
+        
+        // Execute Ajax request to ClientLogin
+        $.ajax({
+            type: 'POST',
+            url: $(this).attr('action'),
+            data: $(this).serialize(),
+            success: function(data, status) {
+                if (data.login_success) {
+					//alert('You are logged in, email: ' + $.cookie('email'));
+					$.mobile.changePage('/givings/');
+				}
+				else {
+                    // Login failed
+                }
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                alert('error: ' + errorThrown);
+            },
+            dataType: 'json'
+        });
+        
+		return false;
+    });
+    </script>
+    
+    <!--div id="login">
+        <form id="loginForm">
+            <input type="hidden" name="accountType" value="HOSTED_OR_GOOGLE" />
+            <input type="hidden" name="service" value="mail" />
+            <input type="hidden" name="source" value="Localhost-Prose-1" />
+            <input type="text" name="Email" />
+            <input type="password" name="Passwd" />
+            <input type="submit" value="Authenticate" />
+        </form>
+    </div>
+    <div id="captcha" style="display:none;">
+        Captcha required:
+        <form id="captchaForm">
+            <input type="hidden" name="accountType" value="HOSTED_OR_GOOGLE" />
+            <input type="hidden" name="source" value="Localhost-Prose-1" />
+            <input type="hidden" name="logintoken" />
+            <input type="text" name="logincaptcha" />
+            <input type="submit" value="Send" />
+        </form>
+    </div-->
+
+{% endblock %}
