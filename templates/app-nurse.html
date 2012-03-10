@@ -2,14 +2,14 @@
 
 {% block content %}
 
-<div data-role="page" id="select-patient" data-theme="d">
+<div data-role="page" id="patient-select" data-theme="d">
 	<div data-role="header" data-position="inline" data-theme="b">
-		<h1>Bedside - Select patient</h1>
-		<a data-direction="reverse" data-icon="home" href="#role">Home</a>		
+		<h1>Bedside</h1>
+		<a data-direction="reverse" data-icon="home" href="/">Logout</a>		
 	</div>
 	
 	<div data-role="content">
-		<ul data-role="listview" data-theme="c" data-filter="true" data-filter-placeholder="Search patient...">
+		<ul data-role="listview" data-theme="c" data-filter="true" data-filter-placeholder="Cerca paziente...">
 			<li>
 				<a href="#patient-review">
 					<div class="ui-li-count">1</div>
@@ -46,7 +46,12 @@
 	<div data-role="header" data-position="inline" data-theme="b">
 		<h1>Bedside</h1>
 		<a data-direction="reverse" data-icon="home" href="/">Logout</a>
-		<a data-icon="arrow-r" href="#nurse2">Start</a>
+		<div data-role="navbar" data-iconpos="right">
+			<ul>
+				<li><a href="#patient-select" data-icon="back">Back</a></li>
+				<li><a href="#nurse2" data-icon="forward">Start</a></li>
+			</ul>
+		</div>
 	</div>
 	
 	<div data-role="content">
@@ -91,7 +96,8 @@
 
 <div data-role="page" id="nurse2" data-theme="d">
 	<div data-role="header" data-position="inline" data-theme="b">
-		<h1>Bedside - Nurse 2</h1>
+		<h1>Bedside</h1>
+		<a class="ui-btn-left" data-direction="reverse" data-icon="home" href="/">Logout</a>
 		<div data-role="navbar" data-iconpos="right">
 			<ul>
 				<li><a href="#patient-review" data-icon="back">Back</a></li>
@@ -99,7 +105,6 @@
 			</ul>
 		</div>
 		
-		<a class="ui-btn-left" data-direction="reverse" data-icon="home" href="/">Logout</a>
 		<!--div class="ui-btn-right" data-role="controlgroup" data-type="horizontal">
 			<a href="index.html" data-role="button" data-icon="back">Back</a>
 			<a href="index.html" data-role="button" data-icon="arrow-r">Next</a>        
@@ -180,8 +185,14 @@
 
 <div data-role="page" id="nurse3" data-theme="d">
 	<div data-role="header" data-position="inline" data-theme="b">
-		<h1>Bedside - Nurse 3</h1>
+		<h1>Bedside</h1>
 		<a data-direction="reverse" data-icon="home" href="/">Logout</a>
+		<div data-role="navbar" data-iconpos="right">
+			<ul>
+				<li><a href="#nurse2" data-icon="back">Back</a></li>
+				<li><a href="/" data-icon="check">Submit</a></li>
+			</ul>
+		</div>
 	</div>
 	
 	<div data-role="content">
