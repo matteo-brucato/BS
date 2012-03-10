@@ -1,0 +1,44 @@
+table {
+	width: 100%;
+	border: 1px solid #555555;
+	background-color: #F3F3F3;
+	padding: 5px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+
+table th {
+	padding: 10px;
+}
+
+table td {
+	padding: 10px;
+	border: 1px solid #BABABA;
+	background-color: #F9F9F9;
+	text-align: center;
+}
+
+table td:first-child {
+	-moz-border-radius-topleft: 15px;
+	-moz-border-radius-bottomleft: 15px;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+}
+
+table td:last-child {
+	-moz-border-radius-topright: 15px;
+	-moz-border-radius-bottomright: 15px;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+/* style for big buttons (tablets oriented) */
+.bigbutton .ui-btn-inner {
+	padding: 100px;
+	font-size: 32px;
+}
+
+/* disable text truncation in buttons */
+.ui-btn-text {
+	white-space: normal;
+}
