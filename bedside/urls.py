@@ -15,7 +15,9 @@ urlpatterns = patterns('bedside.views',
     #(r'^accounts/login/$', 'django.contrib.auth.views.login'),
     (r'^i18n/', include('django.conf.urls.i18n')),
 	#url(r'^mobi/', 'mobi'),
-	url(r'^app', 'app'),
+	url(r'^$', 'start'),
+	url(r'^nurse$', 'nurse'),
+	url(r'^doc$', 'doc'),
 	
 	
 	#url(r'^accounts/profile/$', 'givings'),

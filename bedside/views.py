@@ -22,9 +22,17 @@ class Giving(View):
 		return Response(status.HTTP_404_NOT_FOUND)
 """
 
-def app(request):
+def start(request):
 	return render_to_response('app.html', {}, RequestContext(request))
 	
+#@login_required
+def nurse(request):
+	return render_to_response('app-nurse.html', {}, RequestContext(request))
+
+#@login_required
+def doc(request):
+	return render_to_response('app-doc.html', {}, RequestContext(request))
+
 
 @login_required
 def givings(request):

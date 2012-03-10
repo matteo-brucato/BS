@@ -1,0 +1,87 @@
+{% extends "mobi.html" %}
+
+{% block content %}
+
+<div data-role="page" id="select-patient" data-theme="d">
+	<div data-role="header" data-position="inline" data-theme="b">
+		<h1>Bedside - Select patient</h1>
+		<a data-direction="reverse" data-icon="home" href="#role">Home</a>
+	</div>
+	
+	<div data-role="content">
+		<ul data-role="listview" data-theme="c" data-filter="true" data-filter-placeholder="Search patient...">
+			<li>
+				<a href="#patient-sheet">
+					<h1>Mario Rossi</h1>
+					<p>ID 6438, 42 years old</p>
+				</a>
+			</li>
+			<li>
+				<a href="#patient-sheet">
+					<h1>Mario Rossi</h1>
+					<p>ID 9862, 25 years old</p>
+				</a>
+			</li>
+			<li>
+				<a href="#patient-sheet">
+					<h1>Andrea Aquino</h1>
+					<p>ID 3150, 22 years old</p>
+				</a>
+			</li>
+			<li>
+				<a href="#patient-sheet">
+					<h1>Matteo Brucato</h1>
+					<p>ID 8020, 27 years old</p>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div data-role="page" id="patient-sheet" data-theme="d">
+	<div data-role="header" data-position="inline" data-theme="b">
+		<h1>Bedside - Nurse 1</h1>
+		<a data-direction="reverse" data-icon="home" href="#role">Home</a>
+	</div>
+	
+	<div data-role="content">
+		<p>
+			<h3>Nurse: Anna Bianchi</h3>
+			<div>Surgical ward (A). Floor: 6, room: 2</div>
+		</p>
+		
+		<!-- Patient data -->
+		<h1>Patient data</h1>
+		<table>
+			<thead>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Surname</th>
+				<th>Sex</th>
+				<th>Age</th>
+				<th>Hospitalization date</th>
+				<th>Department</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>6438</td>
+					<td>Mario</td>
+					<td>Rossi</td>
+					<td>Male</td>
+					<td>42</td>
+					<td>Jul 10, 2010. 10:15</td>
+					<td>Emergency ward</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<!-- Diagnosis -->
+		<h1>Diagnosis</h1>
+		<div>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam arcu lorem, consectetur placerat aliquam sit amet, tincidunt viverra lorem. In nulla eros, ullamcorper nec tempus id, fermentum semper lorem. Proin felis orci, tincidunt non pharetra eu, lacinia nec justo. Praesent tellus metus, pharetra id posuere varius, rutrum sed nulla. Nulla a gravida eros. Pellentesque rhoncus velit sed quam pellentesque porta. Duis euismod rhoncus ornare. Integer quis felis mi.<br/><br/>
+			Sed odio felis, molestie sit amet tincidunt a, cursus sed sem. Pellentesque et enim ut dui lacinia rutrum. Aenean sed cursus sem. Nullam pulvinar porttitor iaculis. Integer quis arcu nulla, id bibendum nulla. Integer euismod sagittis ante, vitae malesuada nibh egestas sit amet. Donec vel sem a nisl faucibus tincidunt. Duis at ante sed lorem egestas congue. Quisque dictum nulla ut neque tincidunt blandit. Nam auctor elit at libero dignissim vehicula ac a mauris. Nullam lectus nisl, luctus a tristique sit amet, vestibulum et orci. Aliquam augue nibh, sodales id vehicula vel, gravida mattis mi. Vivamus volutpat vehicula interdum. Vivamus eget odio felis. Etiam dictum risus non tortor ultricies sit amet sollicitudin odio accumsan. Cras sit amet enim nisl.
+		</div>
+	</div>
+</div>
+
+{% endblock %}
