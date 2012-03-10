@@ -70,3 +70,8 @@ ul[data-role=listview] .ui-li-desc {
 .ui-btn-text {
 	white-space: normal;
 }
+
+.current-user-bar {
+	float: right;
+	display: block;
+}

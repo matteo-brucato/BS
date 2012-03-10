@@ -10,18 +10,18 @@
 	<div data-role="content">
 		<div class="ui-grid-a">
 			<div class="ui-block-a">
-				<a data-theme="b" data-role="button" href="#login-doctor" class="bigbutton">Doctor</a>
+				<a data-theme="b" data-role="button" href="#doctor" class="bigbutton">Doctor</a>
 			</div>
 			<div class="ui-block-b">
-				<a data-theme="c" data-role="button" href="#login-nurse" class="bigbutton">Nurse</a>
+				<a data-theme="c" data-role="button" href="#nurse" class="bigbutton">Nurse</a>
 			</div>
 		</div>
 	</div>
 </div>
 
-<div data-role="page" id="login-doctor" data-theme="d">
+<div data-role="page" id="doctor" data-theme="d">
 	<div data-role="header" data-theme="b">
-		<h1>Bedside - Doctor login</h1>
+		<h1>Bedside</h1>
 		<a data-direction="reverse" data-icon="back" href="#role">Back</a>
 	</div>
 	
@@ -30,7 +30,7 @@
 			<p>Your username and password didn't match. Please try again.</p>
 		{% endif %}
 			
-		<h3>Please login</h3>
+		<h3>Doctor Login</h3>
 		<form action="doc" method="post" id="login-form" data-ajax="false">
 			{% csrf_token %}
 			<ul data-role="listview" data-inset="true" data-theme="c">
@@ -56,9 +56,9 @@
 	</div>
 </div>
 
-<div data-role="page" id="login-nurse" data-theme="d">
+<div data-role="page" id="nurse" data-theme="d">
 	<div data-role="header" data-theme="b">
-		<h1>Bedside - Nurse login</h1>
+		<h1>Bedside</h1>
 		<a data-direction="reverse" data-icon="back" href="#role">Back</a>
 	</div>
 	
@@ -67,7 +67,7 @@
 			<p>Your username and password didn't match. Please try again.</p>
 		{% endif %}
 			
-		<h3>Please login</h3>
+		<h3>Nurse Login</h3>
 		<form action="nurse" method="post" id="login-form" data-ajax="false">
 			{% csrf_token %}
 			<ul data-role="listview" data-inset="true" data-theme="c">

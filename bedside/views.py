@@ -6,9 +6,9 @@ from django.core.urlresolvers import reverse
 from django.template import Template, Context, RequestContext
 from django.shortcuts import render_to_response
 
-from djangorestframework.views import View
-from djangorestframework.response import Response
-from djangorestframework import status
+#from djangorestframework.views import View
+#from djangorestframework.response import Response
+#from djangorestframework import status
 
 from models import *
 import simplejson

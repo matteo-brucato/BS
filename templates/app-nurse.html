@@ -11,28 +11,28 @@
 	<div data-role="content">
 		<ul data-role="listview" data-theme="c" data-filter="true" data-filter-placeholder="Search patient...">
 			<li>
-				<a href="#patient-sheet">
+				<a href="#patient-review">
 					<div class="ui-li-count">1</div>
 					<h1>Mario Rossi</h1>
 					<p>ID 6438, 42 years old</p>
 				</a>
 			</li>
 			<li>
-				<a href="#patient-sheet">
+				<a href="#patient-review">
 					<div class="ui-li-count">2</div>
 					<h1>Mario Rossi</h1>
 					<p>ID 9862, 25 years old</p>
 				</a>
 			</li>
 			<li>
-				<a href="#patient-sheet">
+				<a href="#patient-review">
 					<div class="ui-li-count">3</div>
 					<h1>Andrea Aquino</h1>
 					<p>ID 3150, 22 years old</p>
 				</a>
 			</li>
 			<li>
-				<a href="#patient-sheet">
+				<a href="#patient-review">
 					<div class="ui-li-count">4</div>
 					<h1>Matteo Brucato</h1>
 					<p>ID 8020, 27 years old</p>
@@ -42,18 +42,19 @@
 	</div>
 </div>
 
-<div data-role="page" id="patient-sheet" data-theme="d">
+<div data-role="page" id="patient-review" data-theme="d">
 	<div data-role="header" data-position="inline" data-theme="b">
-		<h1>Bedside - Nurse 1</h1>
+		<h1>Bedside</h1>
 		<a data-direction="reverse" data-icon="home" href="#role">Home</a>
 		<a data-icon="arrow-r" href="#nurse2">Next</a>
 	</div>
 	
 	<div data-role="content">
-		<p>
-			<h3>Nurse: Anna Bianchi</h3>
-			<div>Surgical ward (A). Floor: 6, room: 2</div>
-		</p>
+		<div class="current-user-bar">
+			<div>Medicina Interna A - Piano 6, Sala 2</div>
+			<div>Nurse: Anna Bianchi</div>
+			<!--div>Surgical ward (A). Floor: 6, room: 2</div-->
+		</div>
 		
 		<!-- Patient data -->
 		<h1>Patient data</h1>
@@ -81,7 +82,7 @@
 		</table>
 
 		<!-- Diagnosis -->
-		<h1>Diagnosis</h1>
+		<h3>Diagnosis</h3>
 		<div>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam arcu lorem, consectetur placerat aliquam sit amet, tincidunt viverra lorem. In nulla eros, ullamcorper nec tempus id, fermentum semper lorem. Proin felis orci, tincidunt non pharetra eu, lacinia nec justo. Praesent tellus metus, pharetra id posuere varius, rutrum sed nulla. Nulla a gravida eros. Pellentesque rhoncus velit sed quam pellentesque porta. Duis euismod rhoncus ornare. Integer quis felis mi.<br/><br/>
 			Sed odio felis, molestie sit amet tincidunt a, cursus sed sem. Pellentesque et enim ut dui lacinia rutrum. Aenean sed cursus sem. Nullam pulvinar porttitor iaculis. Integer quis arcu nulla, id bibendum nulla. Integer euismod sagittis ante, vitae malesuada nibh egestas sit amet. Donec vel sem a nisl faucibus tincidunt. Duis at ante sed lorem egestas congue. Quisque dictum nulla ut neque tincidunt blandit. Nam auctor elit at libero dignissim vehicula ac a mauris. Nullam lectus nisl, luctus a tristique sit amet, vestibulum et orci. Aliquam augue nibh, sodales id vehicula vel, gravida mattis mi. Vivamus volutpat vehicula interdum. Vivamus eget odio felis. Etiam dictum risus non tortor ultricies sit amet sollicitudin odio accumsan. Cras sit amet enim nisl.
@@ -97,10 +98,11 @@
 	</div>
 	
 	<div data-role="content">
-		<p>
-			<h3>Nurse: Anna Bianchi</h3>
-			<div>Surgical ward (A). Floor: 6, room: 2</div>
-		</p>
+		<div class="current-user-bar">
+			<div>Medicina Interna A - Piano 6, Sala 2</div>
+			<div>Nurse: Anna Bianchi</div>
+			<!--div>Surgical ward (A). Floor: 6, room: 2</div-->
+		</div>
 		
 		<!-- Patient data -->
 		<h1>Patient data</h1>
@@ -149,15 +151,22 @@
 				<tr>
 					<td>Consciousness</td>
 					<td>Awake</td>
-					<td>Voice reaction</td>
-					<td>Pain reaction</td>
-					<td>No reaction</td>
+					<td>Reacts to voice</td>
+					<td>Reacts to pain</td>
+					<td>No reactions</td>
 					<td>0</td>
 				</tr>
-			</tbody>			
+				<tr>
+					<td colspan="5">MEWS score:</td>
+					<td id="mews-score">0</td>
+				</tr>
+			</tbody>	
 		</table>
+		<div style="text-align:right; padding:5px;">
+			<span style="color:red">Red Area &#8805; 3</span>
+			<span style="color:blue">Blue Area &lt; 3</span>
+		</div>	
 
-		<h3>MEWS score: 0</h3>
 	</div>
 </div>
 
@@ -168,10 +177,11 @@
 	</div>
 	
 	<div data-role="content">
-		<p>
-			<h3>Nurse: Anna Bianchi</h3>
-			<div>Surgical ward (A). Floor: 6, room: 2</div>
-		</p>
+		<div class="current-user-bar">
+			<div>Medicina Interna A - Piano 6, Sala 2</div>
+			<div>Nurse: Anna Bianchi</div>
+			<!--div>Surgical ward (A). Floor: 6, room: 2</div-->
+		</div>
 		
 		<!-- Patient data -->
 		<h1>Patient data</h1>
