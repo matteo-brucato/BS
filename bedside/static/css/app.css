@@ -46,7 +46,7 @@ table tbody tr:last-child td:last-child {
 	border: 1px solid #999999 !important;
 }
 
-.hidden {
+.emptyCell {
 	border: none;
 	background-color: transparent;
 }

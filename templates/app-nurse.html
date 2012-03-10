@@ -93,7 +93,7 @@
 	<div data-role="header" data-position="inline" data-theme="b">
 		<h1>Bedside - Nurse 2</h1>
 		<a data-direction="reverse" data-icon="home" href="#role">Home</a>
-		<a data-icon="arrow-r" href="#nurse2">Next</a>
+		<a data-icon="arrow-r" href="#nurse3">Next</a>
 	</div>
 	
 	<div data-role="content">
@@ -125,7 +125,7 @@
 				<tr>
 					<td>FC</td>
 					<td>51 - 100</td>
-					<td class="hidden"></td>
+					<td class="emptyCell"></td>
 					<td>&lt; 40 or 101 - 129</td>
 					<td>&gt; 130</td>
 					<td>0</td>
@@ -133,7 +133,7 @@
 				<tr>
 					<td>PA</td>
 					<td>101 - 199</td>
-					<td class="hidden"></td>
+					<td class="emptyCell"></td>
 					<td>&gt; 200 or 71 - 80</td>
 					<td>&lt; 70</td>
 					<td>0</td>
@@ -141,8 +141,8 @@
 				<tr>
 					<td>Temperature C°</td>
 					<td>35 - 38.4</td>
-					<td class="hidden"></td>
-					<td class="hidden"></td>
+					<td class="emptyCell"></td>
+					<td class="emptyCell"></td>
 					<td>&gt; 38.5 or &lt; 35</td>
 					<td>0</td>
 				</tr>
@@ -157,7 +157,86 @@
 			</tbody>			
 		</table>
 
-		<h2>MEWS score: 0</h2>
+		<h3>MEWS score: 0</h3>
+	</div>
+</div>
+
+<div data-role="page" id="nurse3" data-theme="d">
+	<div data-role="header" data-position="inline" data-theme="b">
+		<h1>Bedside - Nurse 3</h1>
+		<a data-direction="reverse" data-icon="home" href="#role">Home</a>
+	</div>
+	
+	<div data-role="content">
+		<p>
+			<h3>Nurse: Anna Bianchi</h3>
+			<div>Surgical ward (A). Floor: 6, room: 2</div>
+		</p>
+		
+		<!-- Patient data -->
+		<h1>Patient data</h1>
+		<table class="clickabletable">
+			<thead>
+				<th>Parameter</th>
+				<th>0</th>
+				<th>3</th>
+				<th>5</th>
+				<th>6</th>
+				<th>Total</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Respirazione</td>
+					<td>No O<sub>2</sub></td>
+					<td>Si O<sub>2</sub></td>
+					<td>O<sub>2</sub> reserv. bronco aspirazione</td>
+					<td>NIMV</td>
+					<td>0</td>				
+				</tr>
+				<tr>
+					<td>Responsività</td>
+					<td>Orientato</td>
+					<td>No risp. patologie croniche</td>
+					<td>Confusione acuta, agitazione</td>
+					<td>Incosciente di recente insorgenza</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>Sanguinamento</td>
+					<td>Assente</td>
+					<td class="emptyCell"></td>
+					<td class="emptyCell"></td>
+					<td>Presente</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>Controllo PV</td>
+					<td class="emptyCell"></td>
+					<td>&ge; 8 / 12h</td>
+					<td class="emptyCell"></td>
+					<td>&le; 6 / 6h</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>Esami urgenti / 24h</td>
+					<td class="emptyCell"></td>
+					<td>&le; 2</td>
+					<td class="emptyCell"></td>
+					<td>&gt; 2</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>Terapie EV / 24h</td>
+					<td class="emptyCell"></td>
+					<td>&le; 2</td>
+					<td class="emptyCell"></td>
+					<td>&gt; 2</td>
+					<td>0</td>
+				</tr>
+			</tbody>			
+		</table>
+
+		<h3>IP score: 0</h3>
 	</div>
 </div>
 
