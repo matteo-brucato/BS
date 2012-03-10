@@ -71,7 +71,15 @@ ul[data-role=listview] .ui-li-desc {
 	white-space: normal;
 }
 
-.current-user-bar {
+/* color styling */
+.redText {
+	color: #BB3333; margin-right: 15px;
+}
+
+.blueText {
+	color: #3333BB; margin-right: 15px;
+}
+
+.toRight {
 	float: right;
-	display: block;
 }
