@@ -45,28 +45,27 @@
 <div data-role="page" id="patient-review" data-theme="d">
 	<div data-role="header" data-position="inline" data-theme="b">
 		<h1>Bedside</h1>
-		<a data-direction="reverse" data-icon="home" href="#role">Home</a>
-		<a data-icon="arrow-r" href="#nurse2">Next</a>
+		<a data-direction="reverse" data-icon="home" href="/">Logout</a>
+		<a data-icon="arrow-r" href="#nurse2">Start</a>
 	</div>
 	
 	<div data-role="content">
-		<div class="current-user-bar">
+		<div class="toRight">
 			<div>Medicina Interna A - Piano 6, Sala 2</div>
 			<div>Nurse: Anna Bianchi</div>
-			<!--div>Surgical ward (A). Floor: 6, room: 2</div-->
 		</div>
 		
 		<!-- Patient data -->
-		<h1>Patient data</h1>
+		<h1>Dati Paziente</h1>
 		<table>
 			<thead>
 				<th>ID</th>
-				<th>Name</th>
-				<th>Surname</th>
-				<th>Sex</th>
-				<th>Age</th>
-				<th>Hospitalization date</th>
-				<th>Department</th>
+				<th>Nome</th>
+				<th>Cognome</th>
+				<th>Sesso</th>
+				<th>Età</th>
+				<th>Data Ricovero</th>
+				<th>Reparto Inviante</th>
 			</thead>
 			<tbody>
 				<tr>
@@ -76,13 +75,13 @@
 					<td>Male</td>
 					<td>42</td>
 					<td>Jul 10, 2010. 10:15</td>
-					<td>Emergency ward</td>
+					<td>PS</td>
 				</tr>
 			</tbody>
 		</table>
 
 		<!-- Diagnosis -->
-		<h3>Diagnosis</h3>
+		<h3>Diagnosi</h3>
 		<div>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam arcu lorem, consectetur placerat aliquam sit amet, tincidunt viverra lorem. In nulla eros, ullamcorper nec tempus id, fermentum semper lorem. Proin felis orci, tincidunt non pharetra eu, lacinia nec justo. Praesent tellus metus, pharetra id posuere varius, rutrum sed nulla. Nulla a gravida eros. Pellentesque rhoncus velit sed quam pellentesque porta. Duis euismod rhoncus ornare. Integer quis felis mi.<br/><br/>
 			Sed odio felis, molestie sit amet tincidunt a, cursus sed sem. Pellentesque et enim ut dui lacinia rutrum. Aenean sed cursus sem. Nullam pulvinar porttitor iaculis. Integer quis arcu nulla, id bibendum nulla. Integer euismod sagittis ante, vitae malesuada nibh egestas sit amet. Donec vel sem a nisl faucibus tincidunt. Duis at ante sed lorem egestas congue. Quisque dictum nulla ut neque tincidunt blandit. Nam auctor elit at libero dignissim vehicula ac a mauris. Nullam lectus nisl, luctus a tristique sit amet, vestibulum et orci. Aliquam augue nibh, sodales id vehicula vel, gravida mattis mi. Vivamus volutpat vehicula interdum. Vivamus eget odio felis. Etiam dictum risus non tortor ultricies sit amet sollicitudin odio accumsan. Cras sit amet enim nisl.
@@ -93,8 +92,18 @@
 <div data-role="page" id="nurse2" data-theme="d">
 	<div data-role="header" data-position="inline" data-theme="b">
 		<h1>Bedside - Nurse 2</h1>
-		<a data-direction="reverse" data-icon="home" href="#role">Home</a>
-		<a data-icon="arrow-r" href="#nurse3">Next</a>
+		<div data-role="navbar" data-iconpos="right">
+			<ul>
+				<li><a href="#patient-review" data-icon="back">Back</a></li>
+				<li><a href="#nurse3" data-icon="forward">Next</a></li>
+			</ul>
+		</div>
+		
+		<a class="ui-btn-left" data-direction="reverse" data-icon="home" href="/">Logout</a>
+		<!--div class="ui-btn-right" data-role="controlgroup" data-type="horizontal">
+			<a href="index.html" data-role="button" data-icon="back">Back</a>
+			<a href="index.html" data-role="button" data-icon="arrow-r">Next</a>        
+		</div-->
 	</div>
 	
 	<div data-role="content">
@@ -172,14 +181,13 @@
 <div data-role="page" id="nurse3" data-theme="d">
 	<div data-role="header" data-position="inline" data-theme="b">
 		<h1>Bedside - Nurse 3</h1>
-		<a data-direction="reverse" data-icon="home" href="#role">Home</a>
+		<a data-direction="reverse" data-icon="home" href="/">Logout</a>
 	</div>
 	
 	<div data-role="content">
-		<div class="current-user-bar">
+		<div class="toRight">
 			<div>Medicina Interna A - Piano 6, Sala 2</div>
 			<div>Nurse: Anna Bianchi</div>
-			<!--div>Surgical ward (A). Floor: 6, room: 2</div-->
 		</div>
 		
 		<!-- Patient data -->
