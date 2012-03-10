@@ -57,7 +57,7 @@
 	<div data-role="content">
 		<div class="toRight">
 			<div>Medicina Interna A - Piano 6, Sala 2</div>
-			<div>Nurse: Anna Bianchi</div>
+			<div>Infermiere: Anna Bianchi</div>
 		</div>
 		
 		<!-- Patient data -->
@@ -114,7 +114,7 @@
 	<div data-role="content">
 		<div class="toRight">
 			<div>Medicina Interna A - Piano 6, Sala 2</div>
-			<div>Nurse: Anna Bianchi</div>
+			<div>Infermiere: Anna Bianchi</div>
 		</div>
 		
 		<!-- Patient data -->
@@ -133,7 +133,7 @@
 					<td>FR</td>
 					<td>9 - 14</td>
 					<td>15 - 20</td>
-					<td>&lt; 9 or 21 - 29</td>
+					<td>&lt; 9 o 21 - 29</td>
 					<td>&ge; 30</td>
 					<td>0</td>				
 				</tr>
@@ -141,7 +141,7 @@
 					<td>FC</td>
 					<td>51 - 100</td>
 					<td class="emptyCell"></td>
-					<td>&lt; 40 or 101 - 129</td>
+					<td>&lt; 40 o 101 - 129</td>
 					<td>&gt; 130</td>
 					<td>0</td>
 				</tr>
@@ -149,7 +149,7 @@
 					<td>PA</td>
 					<td>101 - 199</td>
 					<td class="emptyCell"></td>
-					<td>&gt; 200 or 71 - 80</td>
+					<td>&gt; 200 o 71 - 80</td>
 					<td>&lt; 70</td>
 					<td>0</td>
 				</tr>
@@ -158,15 +158,15 @@
 					<td>35 - 38.4</td>
 					<td class="emptyCell"></td>
 					<td class="emptyCell"></td>
-					<td>&gt; 38.5 or &lt; 35</td>
+					<td>&gt; 38.5 o &lt; 35</td>
 					<td>0</td>
 				</tr>
 				<tr>
 					<td>Coscienza</td>
-					<td>Awake</td>
-					<td>Reacts to voice</td>
-					<td>Reacts to pain</td>
-					<td>No reactions</td>
+					<td>Sveglio</td>
+					<td>Reaz a voce</td>
+					<td>Reaz a dolore</td>
+					<td>No reaz a stimolo</td>
 					<td>0</td>
 				</tr>
 				<tr>
@@ -176,9 +176,9 @@
 			</tbody>	
 		</table>
 		<p class="toRight">
-			<span class="redText">Red Area &ge; 3</span>
-			<span class="blueText">Blue Area &lt; 3</span>
-		</p>	
+			<span class="redText">Area Rossa &ge; 3</span>
+			<span class="blueText">Area Blu &lt; 3</span>
+		</p>
 
 	</div>
 </div>
@@ -198,26 +198,26 @@
 	<div data-role="content">
 		<div class="toRight">
 			<div>Medicina Interna A - Piano 6, Sala 2</div>
-			<div>Nurse: Anna Bianchi</div>
+			<div>Infermiere: Anna Bianchi</div>
 		</div>
 		
 		<!-- Patient data -->
-		<h1>Patient data</h1>
+		<h1>Dati Paziente</h1>
 		<table class="clickabletable">
 			<thead>
-				<th>Parameter</th>
+				<th>Parametro</th>
 				<th>0</th>
 				<th>3</th>
 				<th>5</th>
 				<th>6</th>
-				<th>Total</th>
+				<th>Totale</th>
 			</thead>
 			<tbody>
 				<tr>
 					<td>Respirazione</td>
 					<td>No O<sub>2</sub></td>
 					<td>Si O<sub>2</sub></td>
-					<td>O<sub>2</sub> reserv. bronco aspirazione</td>
+					<td>O<sub>2</sub> reserv. Bronco Aspirazione</td>
 					<td>NIMV</td>
 					<td>0</td>				
 				</tr>
@@ -225,7 +225,7 @@
 					<td>Responsività</td>
 					<td>Orientato</td>
 					<td>No risp. patologie croniche</td>
-					<td>Confusione acuta, agitazione</td>
+					<td>Confusione Acuta Agitazione</td>
 					<td>Incosciente di recente insorgenza</td>
 					<td>0</td>
 				</tr>
@@ -240,9 +240,9 @@
 				<tr>
 					<td>Controllo PV</td>
 					<td class="emptyCell"></td>
-					<td>&ge; 8 / 12h</td>
+					<td>&ge; 8 - 12h</td>
 					<td class="emptyCell"></td>
-					<td>&le; 6 / 6h</td>
+					<td>&le; 6 hr</td>
 					<td>0</td>
 				</tr>
 				<tr>
@@ -261,10 +261,17 @@
 					<td>&gt; 2</td>
 					<td>0</td>
 				</tr>
-			</tbody>			
+				<tr>
+					<td colspan="5">IP score:</td>
+					<td id="ip-score">0</td>
+				</tr>
+			</tbody>		
 		</table>
+		<p class="toRight">
+			<span class="redText">Area Rossa &ge; 16</span>
+			<span class="blueText">Area Blu &le; 15</span>
+		</p>
 
-		<h3>IP score: 0</h3>
 	</div>
 </div>
 
