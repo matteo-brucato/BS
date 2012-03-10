@@ -47,8 +47,8 @@ table tbody tr:last-child td:last-child {
 }
 
 .emptyCell {
-	border: 1px solid #DDDDDD !important;
-	/*background-color: #EEEEEE;*/
+	border: 1px solid #BABABA !important;
+	background-color: #F9F9F9;
 }
 
 .clickabletable tbody tr td {
@@ -71,7 +71,15 @@ ul[data-role=listview] .ui-li-desc {
 	white-space: normal;
 }
 
-.current-user-bar {
+/* color styling */
+.redText {
+	color: #BB3333; margin-right: 15px;
+}
+
+.blueText {
+	color: #3333BB; margin-right: 15px;
+}
+
+.toRight {
 	float: right;
-	display: block;
 }
