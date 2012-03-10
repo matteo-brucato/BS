@@ -32,6 +32,10 @@ table td:last-child {
 	border-bottom-right-radius: 15px;
 }
 
+ul[data-role=listview] .ui-li-desc {
+	margin-top: 20px;
+}
+
 /* style for big buttons (tablets oriented) */
 .bigbutton .ui-btn-inner {
 	padding: 100px;
