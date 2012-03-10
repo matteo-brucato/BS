@@ -10,10 +10,10 @@
 	<div data-role="content">
 		<div class="ui-grid-a">
 			<div class="ui-block-a">
-				<a data-theme="b" data-role="button" href="#doctor" class="bigbutton">Doctor</a>
+				<a data-theme="b" data-role="button" href="#doctor" class="bigbutton">Medico</a>
 			</div>
 			<div class="ui-block-b">
-				<a data-theme="c" data-role="button" href="#nurse" class="bigbutton">Nurse</a>
+				<a data-theme="c" data-role="button" href="#nurse" class="bigbutton">Infermiere</a>
 			</div>
 		</div>
 	</div>
@@ -30,14 +30,14 @@
 			<p>Your username and password didn't match. Please try again.</p>
 		{% endif %}
 			
-		<h3>Doctor Login</h3>
+		<h3>Login Medico</h3>
 		<form action="doc" method="post" id="login-form" data-ajax="false">
 			{% csrf_token %}
 			<ul data-role="listview" data-inset="true" data-theme="c">
 				<li data-role="fieldcontain">
 				<div data-role="fieldcontain">
-					<label for="username" class="ui-hidden-accessible">Username:</label>
-					<input type="text" name="username" id="username" value="" placeholder="Username..."/>
+					<label for="username" class="ui-hidden-accessible">Nome utente:</label>
+					<input type="text" name="username" id="username" value="" placeholder="Nome utente..."/>
 				</div>
 				<div data-role="fieldcontain">
 					<label for="password" class="ui-hidden-accessible">Password:</label>
@@ -64,14 +64,14 @@
 			<p>Your username and password didn't match. Please try again.</p>
 		{% endif %}
 			
-		<h3>Nurse Login</h3>
+		<h3>Login Infermiere</h3>
 		<form action="nurse" method="post" id="login-form" data-ajax="false">
 			{% csrf_token %}
 			<ul data-role="listview" data-inset="true" data-theme="c">
 				<li data-role="fieldcontain">
 				<div data-role="fieldcontain">
-					<label for="username" class="ui-hidden-accessible">Username:</label>
-					<input type="text" name="username" id="username" value="" placeholder="Username..."/>
+					<label for="username" class="ui-hidden-accessible">Nome utente:</label>
+					<input type="text" name="username" id="username" value="" placeholder="Nome utente..."/>
 				</div>
 				<div data-role="fieldcontain">
 					<label for="password" class="ui-hidden-accessible">Password:</label>
