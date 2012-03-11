@@ -5,33 +5,31 @@ from django.core import serializers
 from django.core.urlresolvers import reverse
 from django.template import Template, Context, RequestContext
 from django.shortcuts import render_to_response
-
-#from djangorestframework.views import View
-#from djangorestframework.response import Response
-#from djangorestframework import status
-
 from models import *
 import simplejson
 
-"""class Givings(View):
-	def get(self, request):
-		return {"Some other resources": [reverse('giving', kwargs={'gid':gid}) for gid in range(3)]}
-
-class Giving(View):
-	def get(self, request, gid):
-		return Response(status.HTTP_404_NOT_FOUND)
-"""
 
 def start(request):
 	return render_to_response('app.html', {}, RequestContext(request))
 	
 #@login_required
 def nurse(request):
-	return render_to_response('app-nurse.html', {'user_role':'Infermiere', 'user_name':'Anna Bianchi'}, RequestContext(request))
+	return render_to_response('app-nurse.html', {'user_role_str':'Infermiere', 'user_name':'Anna Bianchi'}, RequestContext(request))
 
 #@login_required
 def doc(request):
-	return render_to_response('app-doc.html', {'user_role':'Medico', 'user_name':'Mario Brossi'}, RequestContext(request))
+	return render_to_response('app-doc.html', {'user_role_str':'Medico', 'user_name':'Mario Brossi'}, RequestContext(request))
+
+#@login_required
+def submit_nurse(request):
+	return render_to_response('app-submit-ok.html', {'user_role':'nurse'}, RequestContext(request))
+
+#@login_required
+def submit_doc(request):
+	return render_to_response('app-submit-ok.html', {'user_role':'doc'}, RequestContext(request))
+
+
+
 
 
 @login_required

@@ -6,11 +6,11 @@
 
 {% include "jquery-pages/patient-select.html" with page_id="patient-select" %}
 
-{% include "jquery-pages/patient-review.html" with page_id="patient-review" prev_href="#patient-select" prev_str="Back" next_href="#nurse1" next_str="Start" %}
+{% include "jquery-pages/patient-review.html" with page_id="patient-review" prev_href="#patient-select" prev_str="Back" next_href="#nurse1"      next_str="Start" %}
 
-{% include "jquery-pages/nurse1.html"         with page_id="nurse1"         prev_href="#patient-review" prev_str="Back" next_href="#nurse2" next_str="Next" %}
+{% include "jquery-pages/nurse1.html"         with page_id="nurse1"         prev_href="#patient-review" prev_str="Back" next_href="#nurse2"      next_str="Next" %}
 
-{% include "jquery-pages/nurse2.html"         with page_id="nurse2"         prev_href="#nurse1"         prev_str="Back" next_href="/"       next_str="Submit" %}
+{% include "jquery-pages/nurse2.html"         with page_id="nurse2"         prev_href="#nurse1"         prev_str="Back" next_href="nurse/submit" next_str="Submit" %}
 
 
 
