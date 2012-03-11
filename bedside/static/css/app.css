@@ -40,7 +40,7 @@ table tbody tr:last-child td:last-child {
 }
 
 /* extra style for clickable tables */
-.clickabletable tbody tr td:first-child, .clickabletable tbody tr td:last-child {
+.clickabletable tbody tr td:first-child, .clickabletable tbody tr td:last-child, .table-hdr {
 	background-color: #DDDDDD;
 	font-weight: bold;
 	border: 1px solid #999999 !important;
