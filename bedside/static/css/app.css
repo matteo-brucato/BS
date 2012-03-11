@@ -39,6 +39,11 @@ table tbody tr:last-child td:last-child {
 	border-bottom-right-radius: 15px;
 }
 
+/*.clickabletable tbody tr td {
+	border: none !important;
+	background-color: transparent !important;
+}*/
+
 /* extra style for clickable tables */
 .clickabletable tbody tr td:first-child, .clickabletable tbody tr td:last-child, .table-hdr {
 	background-color: #DDDDDD;
@@ -47,8 +52,8 @@ table tbody tr:last-child td:last-child {
 }
 
 .emptyCell {
-	/*border: 1px solid #BABABA !important;*/
-	/*background-color: #EEEEEE;*/
+	border: 1px solid #F3F3F3 !important;
+	background-color: #F3F3F3;
 }
 
 .destination {
@@ -57,6 +62,7 @@ table tbody tr:last-child td:last-child {
 }
 
 .clickabletable tbody tr td {
+	/*padding: 5px 5px 0px 5px;*/
 	padding: 7px;
 }
 
@@ -78,7 +84,7 @@ ul[data-role=listview] .ui-li-desc {
 
 /* color styling */
 .redText {
-	color: #BB3333; margin-right: 15px;
+	color: #9B3A3E; margin-right: 15px;
 }
 
 .blueText {
@@ -94,5 +100,7 @@ ul[data-role=listview] .ui-li-desc {
 }
 
 .highlighted {
-	background-color: #FFDDFF !important;
+	/*background-color: #FFDDFF !important;*/
+	background-color: #B6B6F8 !important;
+	color: #9B3A3E;
 }
