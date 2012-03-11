@@ -58,7 +58,8 @@ table tbody tr:last-child td:last-child {
 
 .destination {
 	background-color: #FFDDFF !important;
-	color: red;
+	color: #FF3333;
+	text-shadow: -1px 1px #550000;
 }
 
 .clickabletable tbody tr td {
