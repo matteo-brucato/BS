@@ -101,6 +101,7 @@ ul[data-role=listview] .ui-li-desc {
 
 .highlighted {
 	/*background-color: #FFDDFF !important;*/
-	background-color: #B6B6F8 !important;
-	color: #9B3A3E;
+	background-color: #789FC6 !important;
+	color: #FFFFFF;
+	border-color: #758C9D;
 }
