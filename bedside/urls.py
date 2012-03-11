@@ -16,8 +16,10 @@ urlpatterns = patterns('bedside.views',
     (r'^i18n/', include('django.conf.urls.i18n')),
 	#url(r'^mobi/', 'mobi'),
 	url(r'^$', 'start'),
-	url(r'^nurse$', 'nurse'),
 	url(r'^doc$', 'doc'),
+	url(r'^nurse$', 'nurse'),
+	url(r'^doc/submit$', 'submit_doc'),
+	url(r'^nurse/submit$', 'submit_nurse'),
 	
 	
 	#url(r'^accounts/profile/$', 'givings'),
