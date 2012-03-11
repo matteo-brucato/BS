@@ -6,10 +6,7 @@
 
 {% block content %}
 	<div data-role="content">
-		<div class="toRight">
-			<div>Medicina Interna A - Piano 6, Sala 2</div>
-			<div>{{ user_role }}: Anna Bianchi</div>
-		</div>
+		{% include "jquery-pages/div-info.html" %}
 		
 		<!-- Patient data -->
 		<h1>Dati Paziente</h1>

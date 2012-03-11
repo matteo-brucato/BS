@@ -51,6 +51,11 @@ table tbody tr:last-child td:last-child {
 	/*background-color: #EEEEEE;*/
 }
 
+.destination {
+	background-color: #FFDDFF !important;
+	color: red;
+}
+
 .clickabletable tbody tr td {
 	padding: 7px;
 }

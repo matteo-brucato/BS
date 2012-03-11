@@ -6,73 +6,30 @@
 
 {% block content %}
 	<div data-role="content">
-		<div class="toRight">
-			<div>Medicina Interna A - Piano 6, Sala 2</div>
-			<div>Infermiere: Anna Bianchi</div>
-		</div>
+		{% include "jquery-pages/div-info.html" %}
 		
 		<!-- Patient data -->
-		<h1>Dati Paziente</h1>
+		<h1>Esoscopia</h1>
 		<table class="clickabletable">
 			<thead>
-				<th>MEWS</th>
-				<th>0</th>
-				<th>1</th>
-				<th>2</th>
-				<th>3</th>
-				<th>Totale</th>
+				<th>Apparati</th>
+				<th>Commento</th>
 			</thead>
 			<tbody>
 				<tr>
-					<td>FR</td>
-					<td>9 - 14</td>
-					<td>15 - 20</td>
-					<td>&lt; 9 o 21 - 29</td>
-					<td>&ge; 30</td>
-					<td>0</td>				
+					<td>A</td>
+					<td><input type="text" value="Edema polm." /></td>
 				</tr>
 				<tr>
-					<td>FC</td>
-					<td>51 - 100</td>
-					<td class="emptyCell"></td>
-					<td>&lt; 40 o 101 - 129</td>
-					<td>&gt; 130</td>
-					<td>0</td>
+					<td>B</td>
+					<td><input type="text" value="Occlusione int." /></td>
 				</tr>
 				<tr>
-					<td>PA</td>
-					<td>101 - 199</td>
-					<td class="emptyCell"></td>
-					<td>&gt; 200 o 71 - 80</td>
-					<td>&lt; 70</td>
-					<td>0</td>
-				</tr>
-				<tr>
-					<td>Temperatura C°</td>
-					<td>35 - 38.4</td>
-					<td class="emptyCell"></td>
-					<td class="emptyCell"></td>
-					<td>&gt; 38.5 o &lt; 35</td>
-					<td>0</td>
-				</tr>
-				<tr>
-					<td>Coscienza</td>
-					<td>Sveglio</td>
-					<td>Reaz a voce</td>
-					<td>Reaz a dolore</td>
-					<td>No reaz a stimolo</td>
-					<td>0</td>
-				</tr>
-				<tr>
-					<td colspan="5">MEWS score:</td>
-					<td id="mews-score">0</td>
+					<td>C</td>
+					<td><input type="text" value="TVP fem-popl" /></td>
 				</tr>
 			</tbody>	
 		</table>
-		<p class="toRight">
-			<span class="redText">Area Rossa &ge; 3</span>
-			<span class="blueText">Area Blu &lt; 3</span>
-		</p>
 
 	</div>
 {% endblock content %}

@@ -8,9 +8,13 @@
 
 {% include "jquery-pages/patient-review.html" with page_id="patient-review" prev_href="#patient-select" prev_str="Back" next_href="#doc1" next_str="Start" %}
 
-{% include "jquery-pages/doc1.html"           with page_id="doc1"           prev_href="#patient-review" prev_str="Back" next_href="#doc2" next_str="Next" %}
+{% include "jquery-pages/doc1.html"           with page_id="doc1"           prev_href="#patient-review" prev_str="Back" next_href="#doc2" next_str="Esoscopia" %}
 
-{% include "jquery-pages/doc2.html"           with page_id="doc2"           prev_href="#doc1"           prev_str="Back" next_href="/"       next_str="Submit" %}
+{% include "jquery-pages/doc2.html"           with page_id="doc2"           prev_href="#doc1"           prev_str="Back" next_href="#doc3" next_str="Esito" %}
+
+{% include "jquery-pages/doc3.html"           with page_id="doc3"           prev_href="#doc2"           prev_str="Esito" next_href="#doc4" next_str="Conclusioni" %}
+
+{% include "jquery-pages/doc4.html"           with page_id="doc4"           prev_href="#doc3"           prev_str="Esito" next_href="/"    next_str="Submit" %}
 
 
 
