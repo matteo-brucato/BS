@@ -1,0 +1,39 @@
+{% extends "jquery-pages/base-page.html" %}
+
+{% block header %}
+	<div data-role="header" data-theme="b">
+		<h1>Bedside</h1>
+		<a data-direction="reverse" data-icon="back" href="#role-selection">Back</a>
+	</div>
+{% endblock header %}
+
+{% block content %}
+	<div data-role="content">
+		{% if form.errors %}
+			<p>Your username and password didn't match. Please try again.</p>
+		{% endif %}
+			
+		<h3>Login {{ user_role }}</h3>
+		<form action="{{ action }}" method="post" id="login-form" data-ajax="false">
+			{% csrf_token %}
+			<ul data-role="listview" data-inset="true" data-theme="c">
+				<li data-role="fieldcontain">
+				<div data-role="fieldcontain">
+					<label for="username" class="ui-hidden-accessible">Nome utente:</label>
+					<input type="text" name="username" id="username" value="" placeholder="Nome utente..."/>
+				</div>
+				<div data-role="fieldcontain">
+					<label for="password" class="ui-hidden-accessible">Password:</label>
+					<input type="password" name="password" id="password" value="" placeholder="Password..."/>
+				</div>
+				</li>
+				<li data-role="fieldcontain">
+					<button type="submit" data-theme="b">Login</button>
+				</li>
+			</ul>
+		</form>
+	</div>
+{% endblock content %}
+
+{% block footer %}
+{% endblock %}
