@@ -2,24 +2,25 @@
 
 {% block content %}
     
-<div data-role="page" id="role" data-theme="d">
+<div data-role="page" id="role-selection" data-theme="d">
 	<div data-role="header" data-theme="b">
 		<h1>Bedside</h1>
 	</div>
 	
 	<div data-role="content">
-		<div class="ui-grid-a">
-			<div class="ui-block-a">
-				<a data-theme="b" data-role="button" href="#doctor" class="bigbutton">Medico</a>
-			</div>
-			<div class="ui-block-b">
-				<a data-theme="c" data-role="button" href="#nurse" class="bigbutton">Infermiere</a>
-			</div>
+		<div>
+			<a data-theme="b" data-role="button" href="#doc" class="bigbutton">Medico</a>
+		</div>
+		<div>
+			<a data-theme="c" data-role="button" href="#nurse" class="bigbutton">Infermiere</a>
 		</div>
 	</div>
 </div>
 
-<div data-role="page" id="doctor" data-theme="d">
+{% include "jquery-pages/login.html" with page_id="doc"   action="doc"   user_role="Medico" %}
+{% include "jquery-pages/login.html" with page_id="nurse" action="nurse" user_role="Infermiere" %}
+
+<!--div data-role="page" id="doctor" data-theme="d">
 	<div data-role="header" data-theme="b">
 		<h1>Bedside</h1>
 		<a data-direction="reverse" data-icon="back" href="#role">Back</a>
@@ -85,6 +86,6 @@
 		</form>
 	</div>
 	
-</div>
+</div-->
 
 {% endblock %}

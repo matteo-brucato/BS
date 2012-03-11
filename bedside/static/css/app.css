@@ -74,8 +74,8 @@ ul[data-role=listview] .ui-li-desc {
 
 /* style for big buttons (tablets oriented) */
 .bigbutton .ui-btn-inner {
-	padding: 100px;
-	font-size: 32px;
+	padding: 70px;
+	font-size: 30px;
 }
 
 /* disable text truncation in buttons */
