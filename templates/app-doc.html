@@ -2,15 +2,16 @@
 
 {% block content %}
 
-<div data-role="page" id="doctor1" data-theme="d">
-	<div data-role="header" data-position="inline" data-theme="b">
-		<h1>BEDSIDE - Doctor 1</h1>
-		<a data-direction="reverse" data-icon="home" href="#role">Home</a>
-	</div>
-	
-	<div data-role="content">
-		Doctor page
-	</div>
-</div>
+
+
+{% include "jquery-pages/patient-select.html" with page_id="patient-select" %}
+
+{% include "jquery-pages/patient-review.html" with page_id="patient-review" prev_href="#patient-select" prev_str="Back" next_href="#doc1" next_str="Start" %}
+
+{% include "jquery-pages/doc1.html"           with page_id="doc1"           prev_href="#patient-review" prev_str="Back" next_href="#doc2" next_str="Next" %}
+
+{% include "jquery-pages/doc2.html"           with page_id="doc2"           prev_href="#doc1"           prev_str="Back" next_href="/"       next_str="Submit" %}
+
+
 
 {% endblock %}

@@ -1,0 +1,46 @@
+{% extends "jquery-pages/base-page.html" %}
+
+{% block header %}
+{% include "jquery-pages/header_and_navbar.html" %}
+{% endblock header %}
+
+{% block content %}
+	<div data-role="content">
+		<div class="toRight">
+			<div>Medicina Interna A - Piano 6, Sala 2</div>
+			<div>{{ user_role }}: Anna Bianchi</div>
+		</div>
+		
+		<!-- Patient data -->
+		<h1>Dati Paziente</h1>
+		<table>
+			<thead>
+				<th>ID</th>
+				<th>Nome</th>
+				<th>Cognome</th>
+				<th>Sesso</th>
+				<th>Età</th>
+				<th>Data Ricovero</th>
+				<th>Reparto Inviante</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>00016438</td>
+					<td>Mario</td>
+					<td>Rossi</td>
+					<td>M</td>
+					<td>42</td>
+					<td>15-01-2012 10:15</td>
+					<td>PS</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<!-- Diagnosis -->
+		<h3>Diagnosi</h3>
+		<div>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam arcu lorem, consectetur placerat aliquam sit amet, tincidunt viverra lorem. In nulla eros, ullamcorper nec tempus id, fermentum semper lorem. Proin felis orci, tincidunt non pharetra eu, lacinia nec justo. Praesent tellus metus, pharetra id posuere varius, rutrum sed nulla. Nulla a gravida eros. Pellentesque rhoncus velit sed quam pellentesque porta. Duis euismod rhoncus ornare. Integer quis felis mi.<br/><br/>
+			Sed odio felis, molestie sit amet tincidunt a, cursus sed sem. Pellentesque et enim ut dui lacinia rutrum. Aenean sed cursus sem. Nullam pulvinar porttitor iaculis. Integer quis arcu nulla, id bibendum nulla. Integer euismod sagittis ante, vitae malesuada nibh egestas sit amet. Donec vel sem a nisl faucibus tincidunt. Duis at ante sed lorem egestas congue. Quisque dictum nulla ut neque tincidunt blandit. Nam auctor elit at libero dignissim vehicula ac a mauris. Nullam lectus nisl, luctus a tristique sit amet, vestibulum et orci. Aliquam augue nibh, sodales id vehicula vel, gravida mattis mi. Vivamus volutpat vehicula interdum. Vivamus eget odio felis. Etiam dictum risus non tortor ultricies sit amet sollicitudin odio accumsan. Cras sit amet enim nisl.
+		</div>
+	</div>
+{% endblock content %}

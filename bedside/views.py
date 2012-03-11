@@ -27,11 +27,11 @@ def start(request):
 	
 #@login_required
 def nurse(request):
-	return render_to_response('app-nurse.html', {}, RequestContext(request))
+	return render_to_response('app-nurse.html', {'user_role':"Infermiere"}, RequestContext(request))
 
 #@login_required
 def doc(request):
-	return render_to_response('app-doc.html', {}, RequestContext(request))
+	return render_to_response('app-doc.html', {'user_role':"Medico"}, RequestContext(request))
 
 
 @login_required

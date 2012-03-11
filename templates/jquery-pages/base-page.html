@@ -1,0 +1,18 @@
+<div data-role="page" id="{{ page_id }}" data-theme="d">
+	
+	{% block header %}
+	<div data-role="header" data-position="inline" data-theme="b">
+		<h1>Bedside</h1>
+		<a data-direction="reverse" data-icon="home" data-ajax="false" href="/">Logout</a>		
+	</div>
+	{% endblock %}
+	
+	{% block content %}{% endblock %}
+	
+	{% block footer %}
+	<div data-role="footer" data-id="footer" data-theme="d" data-position="fixed">
+		<h3>{% now "l j F Y, H:i:s" %}{# Ho provato con DATETIME_FORMAT in settings.py ma non funzia #}</h3>
+	</div>
+	{% endblock %}
+	
+</div>

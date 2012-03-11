@@ -1,0 +1,86 @@
+{% extends "jquery-pages/base-page.html" %}
+
+{% block header %}
+{% include "jquery-pages/header_and_navbar.html" %}
+{% endblock header %}
+
+{% block content %}
+	<div data-role="content">
+		<div class="toRight">
+			<div>Medicina Interna A - Piano 6, Sala 2</div>
+			<div>Infermiere: Anna Bianchi</div>
+		</div>
+		
+		<!-- Patient data -->
+		<h1>Dati Paziente</h1>
+		<table class="clickabletable">
+			<thead>
+				<th>Parametro</th>
+				<th>0</th>
+				<th>3</th>
+				<th>5</th>
+				<th>6</th>
+				<th>Totale</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Respirazione</td>
+					<td>No O<sub>2</sub></td>
+					<td>Si O<sub>2</sub></td>
+					<td>O<sub>2</sub> reserv. Bronco Aspirazione</td>
+					<td>NIMV</td>
+					<td>0</td>				
+				</tr>
+				<tr>
+					<td>Responsività</td>
+					<td>Orientato</td>
+					<td>No risp. patologie croniche</td>
+					<td>Confusione Acuta Agitazione</td>
+					<td>Incosciente di recente insorgenza</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>Sanguinamento</td>
+					<td>Assente</td>
+					<td class="emptyCell"></td>
+					<td class="emptyCell"></td>
+					<td>Presente</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>Controllo PV</td>
+					<td class="emptyCell"></td>
+					<td>&ge; 8 - 12h</td>
+					<td class="emptyCell"></td>
+					<td>&le; 6 hr</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>Esami urgenti / 24h</td>
+					<td class="emptyCell"></td>
+					<td>&le; 2</td>
+					<td class="emptyCell"></td>
+					<td>&gt; 2</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>Terapie EV / 24h</td>
+					<td class="emptyCell"></td>
+					<td>&le; 2</td>
+					<td class="emptyCell"></td>
+					<td>&gt; 2</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td colspan="5">IP score:</td>
+					<td id="ip-score">0</td>
+				</tr>
+			</tbody>		
+		</table>
+		<p class="toRight">
+			<span class="redText">Area Rossa &ge; 16</span>
+			<span class="blueText">Area Blu &le; 15</span>
+		</p>
+
+	</div>
+{% endblock content %}
