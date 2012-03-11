@@ -88,3 +88,11 @@ ul[data-role=listview] .ui-li-desc {
 .toRight {
 	float: right;
 }
+
+.clickableCell {
+	cursor: pointer;
+}
+
+.highlighted {
+	background-color: #FFDDFF !important;
+}
