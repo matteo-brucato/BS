@@ -1,0 +1,31 @@
+{% extends "jquery-pages/base-page.html" %}
+
+{% block header %}
+{% include "jquery-pages/header_and_navbar.html" %}
+{% endblock header %}
+
+{% block content %}
+	<div data-role="content">
+		{% include "jquery-pages/div-info.html" %}
+		
+		<!-- Patient data -->
+		<h1>Conclusioni</h1>
+		<table class="clickabletable">
+			<thead>
+				<th>Accordo BBUS/Clinica</th>
+				<th>Motivo</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>SI</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>NO</td>
+					<td>Angina Instabile</td>
+				</tr>
+			</tbody>	
+		</table>
+
+	</div>
+{% endblock content %}

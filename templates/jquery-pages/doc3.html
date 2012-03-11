@@ -1,0 +1,43 @@
+{% extends "jquery-pages/base-page.html" %}
+
+{% block header %}
+{% include "jquery-pages/header_and_navbar.html" %}
+{% endblock header %}
+
+{% block content %}
+	<div data-role="content">
+		{% include "jquery-pages/div-info.html" %}
+		
+		<!-- Patient data -->
+		<h1>Esito</h1>
+		<table class="clickabletable">
+			<thead>
+				<th>Valori</th>
+				<th>Totale</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>MEWS</td>
+					<td>3</td>
+				</tr>
+				<tr>
+					<td>IP</td>
+					<td>18</td>
+				</tr>
+				<tr>
+					<td>BBs-Us</td>
+					<td>4</td>
+				</tr>
+				<tr>
+					<td>Total Score</td>
+					<td>25</td>
+				</tr>
+				<tr>
+					<td>Destinazione Area</td>
+					<td class="destination"><h1>R</h1></td>
+				</tr>
+			</tbody>	
+		</table>
+
+	</div>
+{% endblock content %}
